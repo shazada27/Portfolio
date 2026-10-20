@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Inquiry & Booking - Muhammad Ahmad</title>
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Project Inquiry & Client Registration</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="information.html" class="nav-link">Information</a>
+        <a href="registration.html" class="nav-link active-page">Inquiry</a>
+    </nav>
+
+    <main class="container">
+        
+       
+
+        <form action="#" method="POST" id="inquiry-form">
+            
+            <!-- Group 1: Personal Details & Password -->
+            <fieldset>
+                <legend>Client Details & Account Setup</legend>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="e.g. John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Email Address:</label>
+                    <input type="email" id="userEmail" name="userEmail" required placeholder="e.g. client@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="userPassword">Create Account Password:</label>
+                    <input type="password" id="userPassword" name="userPassword" required minlength="8" placeholder="Minimum 8 characters">
+                    <small>Must be at least 8 characters long.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="userAge">Age:</label>
+                    <input type="number" id="userAge" name="userAge" min="18" max="99" placeholder="18 - 99">
+                </div>
+            </fieldset>
+
+            <!-- Group 2: Project Specifications -->
+            <fieldset>
+                <legend>Project Scope & Booking</legend>
+
+                <div class="form-group">
+                    <label for="startDate">Preferred Start Date:</label>
+                    <input type="date" id="startDate" name="startDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">Primary Service Needed:</label>
+                    <select id="serviceType" name="serviceType" required>
+                        <option value="" disabled selected>-- Select a Service --</option>
+                        <option value="laravel">Laravel SaaS Development</option>
+                        <option value="wordpress">Custom WordPress Plugin</option>
+                        <option value="database">Database & Query Optimization</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have existing server hosting?</label>
+                    <div class="radio-group">
+                        <label for="hostYes"><input type="radio" id="hostYes" name="hostingReady" value="yes"> Yes, hosted</label>
+                        <label for="hostNo"><input type="radio" id="hostNo" name="hostingReady" value="no"> No, need setup</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Requirements:</label>
+                    <div class="checkbox-group">
+                        <label for="optSEO"><input type="checkbox" id="optSEO" name="extras" value="seo"> API Documentation</label>
+                        <label for="optDesign"><input type="checkbox" id="optDesign" name="extras" value="design"> UI/UX Styling</label>
+                        <label for="optSupport"><input type="checkbox" id="optSupport" name="extras" value="support"> Monthly Maintenance</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectNotes">Project Overview / Additional Notes:</label>
+                    <textarea id="projectNotes" name="projectNotes" rows="4" maxlength="500" placeholder="Provide a short description of your project..."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Form Buttons -->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-submit">Submit Inquiry</button>
+                <button type="reset" class="btn btn-reset">Reset Form</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muhammad Ahmad. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
